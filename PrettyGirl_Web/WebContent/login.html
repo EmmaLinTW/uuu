@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>會員登入</title>
+<script>
+	function refreshImage(){
+		//alert("refresh Image");
+		var captchaImage = document.getElementById("captchaImage");
+		captchaImage.src="images/captcha.jpg#refresh=" + new Date();
+	}
+</script>
+</head>
+<body>
+	<article style="min-height: 70vh;margin:auto; width:80%;">
+		<form action="login.do" method="POST">
+			<p>
+				<label>帳號:</label>
+				<input type="text" required name="id"
+					placeholder="必須輸入身分證號或email" >
+			</p>
+			<p>
+				<label>密碼:</label>
+				<input type="password" required name="password"
+					maxlength="20">
+			</p>
+			<p>
+				<label>驗證碼:</label>
+				<input type="text" value="" required name="captcha">
+				<a href="javascript:refreshImage()" title="點選圖片即可更新驗證碼">
+					<img id="captchaImage" src="images/captcha.jpg" style="vertical-align: middle;">
+				</a>
+			</p>
+			<input type="submit" value="確定">
+		</form>
+	</article>
+</body>
+</html>

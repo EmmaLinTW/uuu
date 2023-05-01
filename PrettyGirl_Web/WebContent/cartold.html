@@ -1,0 +1,93 @@
+<%@ page pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>購物車</title>
+<%@include file="/subviews/global.jsp" %>
+<style>
+	#cart,#cart th,#cart td{border: 1px solid #ddd; padding: 8px;}
+	#cart{border-collapse: collapse; width: 80%;margin: auto;}
+</style>
+</head>
+<body>
+	<jsp:include page="/subviews/header.jsp" >
+		<jsp:param value="購物車" name="subtitle"/>		
+	</jsp:include>
+	<article>
+		<table id="cart">
+			
+			<thead>
+				<tr>
+					<th>名稱</td>
+					<th>原價</th>
+					<th>折扣</th>
+					<th>售價</th>
+					<th>顏色</th>
+					<th>數量</th>					
+				</tr>
+			</thead>
+			<caption>購物明細</caption>
+			<tbody>
+				<tr>
+					<td>
+						<img src="https://im2.book.com.tw/image/getImage?i=https://www.books.com.tw/img/N00/084/29/N000842993.jpg&v=59f96cb8&w=348&h=348" style="width:60px;vertical-align: middle;">
+						Groove三角洞洞鉛筆(6入)
+					</td>
+					<td>420元</td>
+					<td>8折</td>
+					<td>336元</td>
+					<td>櫻花粉</td>
+					<td>2</td>				
+				</tr>
+				<tr>
+					<td>
+						<img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/N00/084/29/N000842992.jpg&v=59f96cba&w=348&h=348" style="width:60px;vertical-align: middle;">
+						Groove三角洞洞鉛筆(6入)
+					</td>
+					<td>420元</td>
+					<td>8折</td>
+					<td>336元</td>
+					<td>湖水綠</td>
+					<td>1</td>				
+				</tr>
+				<tr>
+					<td>
+						<img src="https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/078/29/0010782976.jpg&v=5ab385d1&w=348&h=348" style="width:60px;vertical-align: middle;">
+						現代 Java：輕鬆解決 Java 8 與 9 的難題
+					</td>
+					<td>580元</td>
+					<td>9折</td>
+					<td>522元</td>
+					<td></td>
+					<td>1</td>				
+				</tr>				
+				<tr>
+					<td>
+						<img src="https://im2.book.com.tw/image/getImage?i=http://www.books.com.tw/img/N00/078/74/N000787427.jpg&v=58bd0081&w=348&h=348" style="width:60px;vertical-align: middle;">
+						Quasi Water Brush 水溶性色鉛筆/粉彩筆專用 水筆 長版/大中小 3支組
+					</td>
+					<td>150元</td>
+					<td></td>
+					<td>150元</td>
+					<td></td>
+					<td>1</td>				
+				</tr>				
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3" style="text-align: right">
+						共購買了3項, 4件產品
+					</td>
+					<td colspan="3">
+						總金額: 1680元
+					</td>
+				</tr>
+			</tfoot>			
+
+		</table>
+	</article>
+<%@include file="/subviews/footer.jsp" %>
+
+</body>
+</html>

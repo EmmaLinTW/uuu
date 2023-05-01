@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>會員註冊</title>
+<script>
+	function refreshImage(){
+		//alert("refresh Image");
+		var captchaImage = document.getElementById("captchaImage");
+		captchaImage.src="images/register_captcha.jpg?refresh=" + new Date();
+	}
+</script>
+</head>
+<body>
+	<header>
+		<h1>非常好書<sub>會員註冊</sub></h1>
+	</header>
+	<nav>
+		<a href="register.html">會員註冊</a> | 
+		<a href="login.html">會員登入</a> |
+		<hr>
+	</nav>	
+	<article style="min-height: 70vh;margin:auto; width:80%;border:gray 1px solid">
+			 <form action='' method="POST">
+                <p>
+                    <label>帳號:</label>
+                    <input name='id' type='text' required pattern="[A-Z][12][0-9]{8}"
+                           placeholder='請輸入身分證號'>
+                </p>
+                <p>
+                    <label>姓名:</label>
+                    <input name='name' type='text' required placeholder='請輸入姓名'>
+                </p>
+                <p>
+                    <label>密碼:</label>
+                    <input name='password1' type='password' placeholder='請輸入密碼(6~20個字)'
+                           minlength="6" maxlength="20" required><br>
+                    <label>確認:</label>
+                    <input name='password2' type='password' placeholder='請再確認密碼(6~20個字)'
+                           minlength="6" maxlength="20" required>
+                </p>
+                <p>
+                    <label>性別:</label>
+                    <input type='radio' name='gender' id='male' value="M" required><label>男</label>
+                    <input type='radio' name='gender' id='female' value="F" required><label>女</label>
+                </p>
+                <p>
+                    <label>Email:</label>
+                    <input name='email' type='email' required placeholder='請輸入Email'>
+                </p>              
+                <p >
+                    <label>生日:</label>
+                    <input name='birthday' required type='date'>
+                </p>    
+                <p >
+                    <label>地址:</label>
+                    <textarea name='address'>Taipei</textarea>
+                </p>
+                <p >
+                    <label>電話:</label>
+                    <input name='phone' type='tel'>
+                </p>       
+                <p>
+                	<label>婚姻:</label>
+                	<input type="checkbox" name='married'><label>已婚</label>
+                </p>         
+                <p>
+                    <label>血型:</label>
+                    <select name='bloodType'>
+                        <option value=''>請選擇...</option>
+                        <option value='O'>O型</option>
+                        <option value='A'>A型</option>
+                        <option value='B'>B型</option>
+                        <option value='AB'>AB型</option>
+                    </select>
+                </p>
+                
+                <p>
+					<label>驗證碼:</label>
+					<input type="text" value="" required name="captcha">
+					<a href="javascript:refreshImage()" title="點選圖片即可更新驗證碼">
+						<img id="captchaImage" src="images/register_captcha.jpg" style="vertical-align: middle;">
+					</a>
+				</p>
+                <input type='submit' value="確定">
+            </form>
+	</article>
+	
+	<footer style="text-align:center">
+		<hr>
+		非常好書&copy;版權所有 2019~
+	</footer>
+</body>
+</html>

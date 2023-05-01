@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+  		src="https://code.jquery.com/jquery-3.0.0.js"
+  		integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
+  		crossorigin="anonymous"></script>
+  		
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>產品清單</title>
+	
+	<style>
+	
+		article{
+			text-aligh: center;
+			border: 1px solid gray;
+			width: 50%
+		}
+		
+		ul{
+			width: 70%;
+		}
+	
+		li{
+			display: inline-table;
+			width:300px;
+			padding:5px;
+			/*box-shadow: gray 2px 2px 3px;*/
+			/*height:300px;*/
+			vertical-align: top
+			
+			
+			}
+			
+		.smallcolor{
+			width: 20px;
+			margin: 5px;
+		
+		}
+		
+		.none{
+			display:none;
+		}
+		
+		li:hover .none{
+			display: block;
+		}
+		
+		.discount{
+			color: red;
+		}
+		.size span{
+			border: 1px solid gray;
+			margin: 2px;
+		}
+	</style>
+	
+	<script>
+	
+	/*
+		function showColorPicHandler(srcIcon){
+			var imgSrc = $(srcIcon).attr("data-img");
+			$("#main").attr("src",imgSrc);
+		}
+	
+	*/
+	
+	/*
+	$(function () {
+        var oldColor = "";
+        $("#studentTable tbody tr").mouseover(function () {
+            oldColor = $(this).css("background-color");
+	    $(this).css("background-color","#d9e8fb");
+        }).mouseout(function () {
+            $(this).css("background-color",oldColor);
+        });
+    });
+	*/
+	
+		/*
+		$(function () {
+	        var oldPic = "https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@1.jpg";
+	        $(".smallcolor").mouseenter(function () {
+	        	var colorPic = $(this).attr("data-img")
+		    $("#main").attr("src",colorPic);
+	        }).mouseout(function () {
+	            $("#main").attr("src",oldPic);
+	        });
+	    });
+		*/
+		
+		$(function () {
+	        var oldPic = $("#main").attr("src");
+	        $(".smallcolor").mouseenter(function () {
+	        	var colorPic = $(this).attr("data-img")
+		    $("#main").attr("src",colorPic);
+	        }).mouseout(function () {
+	            $("#main").attr("src",oldPic);
+	        });
+	    });
+		
+	</script>
+	
+</head>
+
+<body>
+	
+	<article>
+		
+		<ul>
+			<li>
+				<a href="" >					
+				<image id="main" style="display:block;width:300px;margin:auto"
+					src="https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@1.jpg"  >
+				</a>	
+				<div>
+					<h4>波浪造型拼接領假兩件包芯紗細針織毛衣洋裝</h4>					
+					<p>定價: NT$ 599 元</p>
+					<p class="discount">優惠: NT$ 500 元</p>	
+					<div class="none">
+						<div class="size">
+							<span>S</span>
+							<span>M</span>
+							<span>L</span>
+							<span>XL</span>
+							<span>XXL</span>
+							<span>XXXL</span>
+						</div>
+						<div >
+							<img class="smallcolor" src="https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@CB-1.jpg"
+									data-img="https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@CB-1-1.jpg">
+							<img class="smallcolor" src="https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@CB-2.jpg"
+									data-img="https://image.obdesign.com.tw/catalog/products/FA1995/FA1995@CB-2-1.jpg">
+						</div>
+							
+					</div>
+				</div>
+			</li>		
+		
+		
+		
+		</ul>
+		
+	</article>
+	
+</body>
+</html>
